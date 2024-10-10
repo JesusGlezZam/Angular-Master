@@ -1,0 +1,22 @@
+<h1> BDZ Personajes</h1>
+<hr>
+
+<p> Cuando se quiere mandar mediante inputs de padre al hijo o queremos asignar a un atributo se utiliza llaves []</p>
+<p> Cuando se quiere escuchar eventos se utiliza ()</p>
+
+<div class="row">
+  <div class="col">
+
+
+      <h4>Listado</h4>
+     <!-- <dbz-list [characterList]="dbzService.characters"
+                (onDelete)="dbzService.deleteCharacterById($event)"></dbz-list> -->
+      <dbz-list [characterList]="characters"
+                (onDelete)="onDeleteCharacter($event)"></dbz-list>
+  </div>
+
+
+  <div class="col">
+   <dbz-add-character (onNewCharacter)="onNewCharacter($event)" ></dbz-add-character>
+  </div>
+</div>
